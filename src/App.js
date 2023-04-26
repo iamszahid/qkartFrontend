@@ -13,11 +13,24 @@ function App() {
     <div className="App">
       {/* TODO: CRIO_TASK_MODULE_LOGIN - To add configure routes and their mapping */}
       {/* <Register /> */}
-        <Switch>
-          <Route path="/login" component={Login}/>
-          <Route path="/register" component={Register}/>
-          <Route path="/" component={Products}/>
-        </Switch>
+         <Switch>
+        <Route exact path="/">
+          <Products />
+        </Route>
+        <Route exact path="/register">
+          <Register />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/checkout">
+          <Checkout />
+        </Route>
+        <Route exact path="/thanks">
+          <Thanks />
+        </Route>
+      </Switch>
+
     </div>
   );
 }
